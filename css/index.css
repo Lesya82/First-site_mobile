@@ -1,0 +1,557 @@
+/*General*/
+
+:root {
+    --main-color: black;
+    --secondary-color: red;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+    font-family: "Lucida Calligraphy", cursive;
+}
+
+h1 {
+  font-size: 1.4rem;
+  text-align: center;
+  justify-content: space-around;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+h2 {
+  text-align: center ;
+  font-size: 35px;
+  color: white;
+  background-color: var(--secondary-color);
+  margin: 30px 0 30px 0;
+  padding:10px;
+}
+
+
+/*Header*/
+
+header {
+    width: 100%;
+    height: 91px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    background-color: #fff;
+}
+
+header .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px 20px 20px;
+}
+
+header nav.menu {
+    display: block;
+}
+
+header .menu a {
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 150ms linear;
+    text-decoration: none;
+    margin: 10px;
+}
+
+header .menu a:hover {
+  color: var(--secondary-color);
+}
+
+/*Burger menu*/
+
+#burger-checkbox {
+    display: none;
+}
+
+.burger-icon {
+    display: none;
+    color: var(--secondary-color);
+}
+
+.header #burger-checkbox:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+/*Responsiveness Header*/
+@media (max-width: 953px) {
+    .burger-icon {
+        display: block;
+        justify-self: flex-end;
+        margin-right: 20px;
+    }
+    header .content #burger-checkbox ~ .menu {
+        display: none;
+    }
+    h1 {
+      font-size: 1.1rem;
+    }
+}
+
+  /* section 1 */
+  
+  .background-image {
+    background-image: url(../img/girlmarta.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0 550px 70px;
+    font-size: 22px;
+    font-family: "Lucida Calligraphy", cursive;
+    text-align: center;
+    margin: auto;
+  }
+
+/*Responsiveness section 1*/
+@media (max-width: 953px) {
+  .background-image p{
+    font-size: 0.7rem;
+  }
+  .background-image {
+    justify-content: center;
+    padding:0 0 300px 8px;
+  }
+}
+
+/*Section About me*/
+#textAbMe {
+  text-align: justify;
+  font-size: 17px;
+  padding: 8px ;
+}
+
+.photome {
+  background-image: url(../img/photographer.jpg);
+  background-position: center;
+    background-size: cover;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0 550px 70px;
+    font-size: 22px;
+    font-family: "Lucida Calligraphy", cursive;
+    text-align: center;
+    margin: auto;
+}
+
+/*Responsiveness section About me*/
+@media (max-width: 953px) {
+  h2{
+    font-size: 1rem;
+  }
+  .photome{
+    min-height: 280px;
+  }
+}
+
+/*section Studio*/
+
+  .studioContainer {
+    display: flex;
+    padding: 0px;
+  }
+  
+  #textAboutStudio {
+    display: flex;
+    text-align: justify ;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+/*Responsiveness section Studio*/
+@media (max-width: 953px) {
+  .studioContainer {
+    display: block;
+  }
+  .studioContainer img{
+    width:100%;
+    height:280px;
+  }
+  #textAboutStudio {
+    padding:8px;
+  }
+}
+
+/*section Portfolio*/
+.photo-card img {
+  width: 100%;
+}
+
+.photo-card {
+  display: block;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.name-photo{
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+/*Responsiveness section Portfolio*/
+
+@media (min-width: 350px) {
+  .photo-list {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  .photo-card img {
+    width: 100%;
+    height: 360px;
+  }
+}
+
+@media (min-width: 600px) {
+  .photo-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+  } 
+}
+
+/*@media (min-width: 660px) {
+  .photo-list {
+      grid-template-columns: 1fr 1fr 1fr;    
+  }    
+}*/
+
+@media (min-width: 980px) {
+  .photo-list {
+      grid-template-columns: repeat(4, 1fr);    
+  }    
+}
+
+@media (max-width: 953px) {
+  .carousel-item img{
+    width:100%;
+    height:100%;
+  }
+}
+
+/*section Video*/
+
+.videoPlace {
+  display: flex;
+  justify-content: center;
+}
+
+/*Responsiveness section Video*/
+@media (max-width: 953px) {
+  .videoPlace {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*section Pricing*/
+  .in-on-studio {
+    display: flex;
+    justify-content: center;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .pricing-in-on-studio {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold ;
+    padding: 10px 0 0 10px ;
+  }
+  
+  .acenter {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+    cursor: pointer;
+  }
+  
+/*Responsiveness section Pricing*/
+@media (max-width: 600px) {
+  .pricing-in-on-studio {
+    font-size: 12px;
+  }
+  .acenter{
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+    cursor: pointer;
+  }
+}
+
+/*Section Contacts Kids Photographer*/
+
+.textInConKidsPh{
+  text-align: justify;
+  font-size: 20px;
+  padding: 0 15px 0 15px;
+}
+
+  .clock {
+    color:var(--secondary-color);
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .button-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  button {
+    background-color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  .containerContactsMap {
+    display: flex;
+    padding: 5px;
+  }
+  
+  .mapWidthHeight{
+    width:50%;
+    height:600px;
+  }
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  input[type=email], select, textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color:var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  input[type=submit]:hover {
+    background-color:var(--secondary-color);
+    border-color:var(--secondary-color);
+  }
+
+  .container {
+    width: 50%;
+    height: 600px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /*Responsiveness section Contacts Kids Photographer*/ 
+  @media (max-width: 600px) {
+    .clock {
+      color:var(--secondary-color);
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .textInConKidsPh{
+      font-size: 15px;
+    }
+    button {
+      font-size: 13px;
+    }
+    .containerContactsMap {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .mapWidthHeight{
+      width:100%;
+      height:450px;
+    }
+    .container {
+      width: 100%;
+      height: 470px;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      font-size: 13px;
+    }
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      resize: vertical;
+      font-size: 12px;
+    }
+    
+    input[type=number], select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      resize: vertical;
+      font-size: 12px;
+    }
+    
+    input[type=email], select, textarea {
+      width: 100%;
+      /* Full width */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      resize: vertical;
+      font-size: 12px;
+    }
+    
+    input[type=submit] {
+      background-color:var(--secondary-color);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  }
+
+/*footer*/
+  .adress-center {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .menuFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .menuFooter a {
+    color: black;
+    text-decoration: none;
+    font-size: 120%;
+    padding: 0 10px 20px 5px;
+    /*поле навколо тексту*/
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    text-align: center;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    list-style-type: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
+  
+  .social-icons li a {
+    border-bottom: none;
+  }
+  
+  .social-icons li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+.footerCreated{
+  text-align:center;
+  font-size: 15px;
+  padding:0 0 20px 20px;
+}
+
+  /*Responsiveness footer*/ 
+  @media (max-width: 630px) {
+    .menuFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
+    }
+    footer .menuFooter a {
+      color: black;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 0;
+    }
+    .adress-center {
+      text-align: center;
+      font-size: 10px;
+    }
+    .footerCreated{
+      text-align:center;
+      font-size: 10px;
+      padding:0 0 20px 20px;
+    }
+  }

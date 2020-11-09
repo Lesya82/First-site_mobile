@@ -9,26 +9,33 @@
     </head>
     <body>
         <header>
-            <nav class="header-nav">
-                <div class="logo">KIDS PHOTOGRAPHER</div>
-                <div class="menu-items">
+            <div class="content">
+                    <div><h1>KIDS PHOTOGRAPHER</h1></div>
+                <label class="burger-icon" for="burger-checkbox">☰</label>
+                <input type="checkbox" id="burger-checkbox">
+                <nav class="menu">
                     <a href="#aboutme">About me</a>
                     <a href="#studio">Studio</a>
                     <a href="#portfolio">Portfolio</a>
                     <a href="#video">Video</a>
                     <a href="#pricing">Pricing</a>
                     <a href="#contacts">Contacts</a>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
         <main>
-            <section class="background-image" class="img-card">
-                <h2></h2>
+            <section class="background-image">
                 <p>
-                    <b>Kids Photography &amp; Videography</b>
+                    <b>Kids Photography</b>
                 </p>
                 <p>
-                    <b>Expertly retouched photos &amp; videos</b>
+                    <b>&amp; Videography</b>
+                </p>
+                <p>
+                    <b>Expertly retouched</b>
+                </p>
+                <p>
+                    <b>photos &amp; videos</b>
                 </p>
             </section>
             <section id="aboutme">
@@ -44,7 +51,7 @@
             <h2>Studio</h2>
             <div class="studioContainer">
                 <div>
-                    <img src="img/studio.jpg" alt="Studio" width="480" height="350">
+                    <img src="img/studio.jpg" alt="Studio" width="478" height="350">
                 </div>
                 <div>
                     <p id="textAboutStudio">On the territory of the studio there are 7 decorated backgrounds, 
@@ -66,18 +73,40 @@
 </section>
 <section id="portfolio">
     <h2>Portfolio</h2>
-    <div>
-        <img src="img/beautiful-girl.jpg" alt="Beautiful Girl" width="240" height="330">
-        <img src="img/stylish-boy.jpg" alt="Stylish Boy" width="240" height="330">
-        <img src="img/princess.jpg" alt="Princess" width="240" height="330">
-        <img src="img/friendship.jpg" alt="Friendship" width="240" height="330">
+    <div class="photo-list">
+        <article class="photo-card">
+            <img src="img/beautiful-girl.jpg" alt="Beautiful Girl" width="220" height="360">
+            <p class="name-photo">Beautiful girl</p>
+        </article> 
+        <article class="photo-card">  
+            <img src="img/stylish-boy.jpg" alt="Stylish Boy" width="220" height="360">
+            <p class="name-photo">Stylish boy</p>
+        </article>
+        <article class="photo-card">  
+            <img src="img/princess.jpg" alt="Princess" width="220" height="360">
+            <p class="name-photo">Princess</p>
+        </article>
+        <article class="photo-card"> 
+            <img src="img/friendship.jpg" alt="Friendship" width="220" height="360">
+            <p class="name-photo">Friendship</p>
+        </article>
+        <article class="photo-card">
+            <img src="img/nastya.jpg" alt="Nastya" width="220" height="360">
+            <p class="name-photo">Nastya</p>
+        </article>
+        <article class="photo-card">
+            <img src="img/sonia.jpg" alt="Sonia" width="220" height="360">
+            <p class="name-photo">Sonia</p>
+       </article>
+       <article class="photo-card">
+            <img src="img/beautiful-eyes.jpg" alt="Beautiful Eyes" width="220" height="360">
+            <p class="name-photo">Beautiful eyes</p>
+        </article>
+        <article class="photo-card">
+            <img src="img/natalia.jpg" alt="Natalia" width="220" height="360">
+            <p class="name-photo">Natalia</p>
+      </article>
     </div>
-    <br>
-</div><img src="img/nastya.jpg" alt="Nastya" width="240" height="330">
-<img src="img/sonia.jpg" alt="Sonia" width="240" height="330">
-<img src="img/beautiful-eyes.jpg" alt="Beautiful Eyes" width="240" height="330">
-<img src="img/natalia.jpg" alt="Natalia" width="240" height="330">
-</div><br>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -104,7 +133,7 @@
     <h2>Video</h2>
     <h3>Girl with the dog</h3>
     <div class="videoPlace">
-        <iframe class="dntshow" width="600" height="444" src="https://www.youtube.com/embed/I38HlmNfarQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="dntshow"  width = "600"  height = "400" src="https://www.youtube.com/embed/I38HlmNfarQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </section>
 <section id="pricing">
@@ -130,7 +159,7 @@
 </section>
 <section id="contacts">
     <h2>Contacts Kids Photographer</h2>
-    <div Style="text-align: justify; font-size: 20px;">Kids photos is our obsession. We exist to preserve your memories in a way that can be seen, touched and held by everyone who enters your home. Stop time and call back or write to me. I am waiting for you.</div>
+    <div class="textInConKidsPh">Kids photos is our obsession. We exist to preserve your memories in a way that can be seen, touched and held by everyone who enters your home. Stop time and call back or write to me. I am waiting for you.</div>
     <div class="clock"></div>
     <br>
     <div class="button-center">
@@ -139,7 +168,7 @@
         </div>
     </div>
     <br>
-    <div class="containerContacsMap">
+    <div class="containerContactsMap">
         <div class="container">
             <form action="https://formspree.io/f/xgepopgb" method="POST">
                 <label for="fname">Name</label>
@@ -161,7 +190,8 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-        <div id="map" style="width:50%;height:550px;"></div>
+        <br>
+        <div id="map" class="mapWidthHeight"></div>
         <script>
             function myMap() {
                 var mapCanvas = document.getElementById("map");
@@ -212,7 +242,7 @@
                 </a>
             </li>
         </ul>
-        <div style="text-align:center; font-size: 15px; padding:0 0 20px 20px;">Created by me 2020</div>
+        <div class="footerCreated">Created by me 2020</div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
